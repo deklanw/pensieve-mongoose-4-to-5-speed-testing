@@ -1,0 +1,53 @@
+{
+  "name": "pensieve-server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "start": "node scripts/start.js",
+    "start:prod": "node scripts/prod.js",
+    "start:scheduler": "node scripts/scheduler.js",
+    "dev": "yarn start:watch",
+    "jobs": "node scripts/jobs.js",
+    "test": "node scripts/test.js",
+    "test:watch": "nodemon --watch . --exec 'yarn test'",
+    "start:watch": "nodemon --watch . --exec 'yarn start'",
+    "lint": "eslint ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
+    "agenda": "^1.0.3",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.18.2",
+    "chalk": "^2.3.0",
+    "console.table": "^0.10.0",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "glob": "^7.1.2",
+    "jsonwebtoken": "^8.1.0",
+    "moment": "^2.20.1",
+    "mongoose": "^4.13.7",
+    "morgan": "^1.9.0",
+    "niceware": "^1.0.5",
+    "pluralize": "^7.0.0",
+    "swagger-ui-express": "^2.0.13"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.14.7",
+    "pow-mongodb-fixtures": "^0.14.0",
+    "sinon": "^4.2.0",
+    "sinon-chai": "^2.14.0",
+    "supertest": "^3.0.0"
+  }
+}
